@@ -2,7 +2,7 @@ const express = require('express');
 
 const ejs = require('ejs');
 const path = require('path');
-const PORT = 3000||process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 
 const db = require("./config/mongoose");
 const List = require("./models/list");
@@ -52,23 +52,23 @@ app.post('/create-item', function (req, res) {
     });
 });
 
-app.get('/delete-item',function(req,res){
+app.get('/delete-item', function (req, res) {
 
-let id=req.query;
- 
-var count= Object.keys(id).length;
-for(let i=0;i<count;i++){
+    let id = req.query;
 
-    List.findByIdAndDelete(Object.keys(id)[i],function(err){
-        console.log("error in deleting the object",err);
-        return;
-    });
+    var count = Object.keys(id).length;
+    for (let i = 0; i < count; i++) {
 
-}
-res.redirect('back');
+        List.findByIdAndDelete(Object.keys(id)[i], function (err) {
+            console.log("error in deleting the object", err);
+            return;
+        });
+
+    }
+    res.redirect('back');
 });
 
-app.listen(port, function (err) {
+app.listen(PORT, function (err) {
 
     if (err) {
         console.log("error in loading", err);
