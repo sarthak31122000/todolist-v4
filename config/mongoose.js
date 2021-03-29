@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-
+// initialising mongoose
 mongoose.connect('mongodb://localhost/todolist_db');
 
 

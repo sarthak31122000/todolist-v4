@@ -1,5 +1,6 @@
+// requiring mongoose
 const mongoose = require('mongoose');
-
+// declaring listschema for designing our list item
 
 const ListSchema = new mongoose.Schema({
 
@@ -17,6 +18,7 @@ const ListSchema = new mongoose.Schema({
     }
 
 });
+// exporting list to outer modules using exports
 
 const List = mongoose.model('List', ListSchema);
 
