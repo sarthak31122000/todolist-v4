@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <title><%= title %></title>
+</head>
+
+<body>
+
+
+
+    <form action="/create-item" method="POST">
+        <div class="content">
+            <div class="heading">
+                <h1>Todo App</h1>
+            </div>
+            <div class="description">
+                <label for="desc">DESCRIPTION</label>
+                <input type="text" id="desc" placeholder="What do you need to do?" name="description" autocomplete="off"
+                    required>
+            </div>
+            <div class="due-time">
+                <label for="due-date">DUE DATE</label>
+                <input type="datetime-local" name="dueDate" id="due-date" required>
+            </div>
+            <div class="category-name">
+                <label for="category">CATEGORY</label>
+                <select name="category" id="category" required>
+                    <option value="school">School</option>
+                    <option value="Work">Work</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button class="btn1" type="submit"><i class="fas fa-plus"></i>Add</button>
+            </div>
+
+        </div>
+
+    </form>
+
+    <form action="/delete-item" method="get" class="delete-form">
+        <div class="list-items">
+            <% for(let i=0;i<todo_list.length;i++){ %>
+
+            <div class="list-container">
+                <div class="list-check">
+                    <input class="option-input checkbox" type="checkbox" name="<%= todo_list[i]._id %>">
+                </div>
+
+                <div class="list-item">
+                    <%= todo_list[i].item %>
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i>
+                        <%= todo_list[i].date %>
+                    </div>
+
+                </div>
+
+                <div class="list-category">
+                    <%= todo_list[i].category %>
+                </div>
+            </div>
+
+            <% } %>
+
+            <button class="btn2" type="submit"><i class="fas fa-trash-alt"></i>Delete</button>
+        </div>
+
+
+
+    </form>
+
+    <script src="/css/js/script.js"></script>
+
+</body>
+
+</html>
