@@ -29,7 +29,7 @@ body {
     grid-row: 1/2;
     grid-column: 6/8;
 }
-
+/* styling the description box */
 .description {
     grid-column: 2/12;
     grid-row: 2/4;
@@ -42,13 +42,13 @@ body {
     padding: 1.25rem;
     box-sizing: unset;
 }
-
+/* styling the labels  */
 label {
     font-size: 1.5rem;
     color: #536162;
 
 }
-
+/* description class styling */
 .description input {
     width: 80%;
     height: 3rem;
@@ -59,7 +59,7 @@ label {
 .description input:focus {
     outline: none;
 }
-
+/* category class styling */
 .category-name {
     grid-column: 2/7;
     grid-row: 4/6;
@@ -81,7 +81,7 @@ label {
     outline: none;
 
 }
-
+/* due time class styling */
 .due-time {
     grid-column: 7/12;
     grid-row: 4/6;
@@ -103,7 +103,7 @@ label {
 .due-time input:focus {
     outline: none;
 }
-
+/* styling all the buttons */
 .button-group {
     grid-row: 6/8;
     grid-column: 5/9;
@@ -155,15 +155,19 @@ label {
     width: 9rem;
 }
 
+.btn2 {
+    margin-bottom: 3rem;
+}
+
 button i {
     font-size: 20px;
     margin: 8px;
 }
-
+/* styling the delete form */
 .delete-form {
     margin-top: -4rem;
 }
-
+/* styling all the list items */
 .list-items {
     text-align: center;
     background-color: white;
@@ -185,7 +189,7 @@ button i {
 
 }
 
-
+/* adding animations to the checkbox */
 @keyframes click-wave {
     0% {
         height: 20px;
@@ -275,6 +279,3 @@ button i {
     font-family: system-ui;
 }
 
-.btn2 {
-    margin-bottom: 3rem;
-}

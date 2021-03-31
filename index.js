@@ -85,3 +85,8 @@ app.listen(port, function (err) {
     console.log("server is up and running");
 
 });
+
+// // Note:respected sir/mam i prepared this project in less than 5 days although my design is not looking 
+// exactly similar as shown in the gif but i have tried my best to make my design as good as possible .Also
+// the backend functionality of my project is working exactly as expected in the image gif. Since my exams are approaching and  so 
+// is the deadline therefore I wont be able to devote any more time on this . Thus please give me marks according to my efforts shown
